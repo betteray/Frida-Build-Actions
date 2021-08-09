@@ -37,7 +37,7 @@ jobs:
               const releaseVersion = '${{ steps.pullFridaLatestRelease.outputs.FRIDA_VERSION }}'
               const releaseResponse = await github.repos.getReleaseByTag({
                 owner: '${{ github.repository_owner }}',
-                repo: '${{ github.event.repository.name }}',
+                repo: 'strongR-frida-android',
                 tag: releaseVersion
               });
               const {
